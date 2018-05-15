@@ -1,0 +1,22 @@
+{
+  "name": "reversi",
+  "version": "1.0.0",
+  "description": "This is the game of Reversi",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "(https://github.com/shilpatripathi/Reversi.git)"
+  },
+  "keywords": [
+    "reversi"
+  ],
+  "author": "Shilpa Tripathi",
+  "license": "GPL-3.0",
+  "dependencies": {
+    "node-static": "^0.7.10",
+    "socket.io": "^2.1.0"
+  }
+}
