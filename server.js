@@ -9,11 +9,11 @@ var directory = __dirname + '/public';
 *information and we know that because port won't be set */
 if (typeof port == 'undefined' || !port) {
 	directory = './public';
-	port = 8080
+	port = 8080;
 }
 
-/* Set up a static web-server that will deliver files from the filesystem */
-var file = new static.Server (directory);
+/* Set up a static web-server that will deliver files from the file system */
+var file = new static.Server(directory);
 /* Construct an http server that gets files from the file server */
 var app = http.createServer(
 		function(request,response) {
