@@ -133,7 +133,6 @@ io.sockets.on('connection', function(socket) {
 					io.sockets.in(room).emit('join_room_response',success_data);
 					log('Room'+room+'was just joined by'+username);
 				}); 
-});
 
 /* send_message command */
 	/* payload: 
@@ -208,6 +207,4 @@ io.sockets.on('connection', function(socket) {
 		io.sockets.in(room).emit('send_message_response', success_data);
 		log('Message sent to room ' + room + ' by ' + username);
 	});
-
-
 });
