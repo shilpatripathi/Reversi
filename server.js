@@ -160,7 +160,6 @@ io.sockets.on('connection', function(socket) {
 
 	/* disconnect message */
 
-
 	socket.on('disconnect', function(){
 		log('Client disconnected '+JSON.stringify(players[socket.id]));
 		
