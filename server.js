@@ -33,47 +33,50 @@ console.log ('The Server is running');
 /*	Set up the web socket server */
 
 /* A registry of socket_ids and player information */
-var players=[];
+var players = [];
 
-var io=require('socket.io').listen(app);
+
+var io = require('socket.io').listen(app);
 
 io.sockets.on('connection', function(socket) {
-			
-	log('Client connection by '+socket.id);   
 
-			  function log(){
-				var array=['*** Server Log Message: '];
-				for(var i=0; i<arguments.length; i++) {
-					array.push(arguments[i]);
-					console.log(arguments[i]);
-				}
-				socket.emit('log',array);
-				socket.broadcast.emit('log',array);
-			}
+	log('Client connection by '+socket.id);
+
+	function log(){
+		var array = ['*** Server Log Message: '];
+		for(var i = 0; i < arguments.length; i++){
+			array.push(arguments[i]);
+			console.log(arguments[i]);
+		}
+		socket.emit('log', array);
+		socket.broadcast.emit('log',array);
+	}
 
 	
-			/*join_room command */
-/* payload:
-	*{
-	*'room';room to join,
-	*'username':username of person joining
-	}
-	join_room_response:
+
+	/* join_room command */
+	/* payload:
 	{
-		'result':'success',
-		'room': room joined,
-		'username': username that joined,
-		'socket_id':the socket id of the person that joined,
-		'membership':number of people in the room including the new one
+	 	'room': room to join,
+	 	'username' : username of person joining
+	}
+	join_room_response: {
+		'result': 'success',
+		'room' : room joined,
+		'socket_id': the socket id of the person that joined
+		'username' : username that joined,
+		'membership' : number of people in the room including the new one
 	}
 	or
 	{
-		'result':'fail',
-		'message': failure message,
-	 } 
-*/
-	
-			socket.on('join_room',function(payload){
+		'result': 'fail',
+		'message' : failure message
+	}
+	*/
+
+
+
+	socket.on('join_room',function(payload){
 		log('\'join_room\' command',+JSON.stringify(payload));
 
 		/* check that client sent a payload */
@@ -153,6 +156,7 @@ io.sockets.on('connection', function(socket) {
 	});
 
 	
+
 
 	/* disconnect message */
 
