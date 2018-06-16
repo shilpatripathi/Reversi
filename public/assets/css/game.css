@@ -16,6 +16,7 @@ body{
 table#game_board{
 	margin:auto;
 	border-style:groove;
+	background-color: antiquewhite;
 	border-width:4px;
 	border-color:rgba(255,255,255,1.00);
 }
@@ -23,6 +24,7 @@ table#game_board{
 table#game_board td{
 	padding:5px;
 	border-style:groove;
+	background-color: antiquewhite;
 	border-width:4px;
 	border-color:rgba(255,255,255,1.00);
 }
