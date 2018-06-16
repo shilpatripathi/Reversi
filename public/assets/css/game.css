@@ -6,8 +6,8 @@ font-family: 'Russo One', sans-serif;
 font-family: 'Poiret One', cursive;
 
 body{
-		 background-image: url('../images/yellow.jpg');
-		 background-color: rgba(255,255,255,1.00);
+		 
+		background-color: rgba(255,255,255,1.00);
 		 background-size: 100% 100%;
 	 }
 
@@ -16,15 +16,33 @@ body{
 table#game_board{
 	margin:auto;
 	border-style:groove;
-	border-width:8px;
-	border-color:rgba(77,77,77,1.00);
+	border-width:4px;
+	border-color:rgba(255,255,255,1.00);
 }
 
 table#game_board td{
 	padding:5px;
 	border-style:groove;
-	border-width:8px;
-	border-color:rgba(129,129,129,1.00);
+	border-width:4px;
+	border-color:rgba(255,255,255,1.00);
+}
+
+#my_color h3{
+	font-family: 'Oswald', sans-serif;
+ 	font-size: 46px;
+    font-weight: normal;
+    color: black;
+	padding-top: 20px;
+	margin:0px;
+}
+
+#send_message_holder label{
+  font-family: 'Poiret One', cursive;
+  font-size: 32px;
+  font-weight: normal;
+  color: black;
+	padding-top: 20px;
+	margin:0px;
 }
 
 #messages p{
